@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.chanalaaa.app01.MainActivity"
-    tools:showIn="@layout/activity_main">
+    tools:showIn="@layout/activity_main"
+    android:background="@drawable/bg">
 
     <TextView
         android:layout_width="wrap_content"
@@ -15,7 +16,8 @@
         android:id="@+id/txtTitle"
         android:textSize="@dimen/h1"
         android:textStyle="bold"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffffff" />
 
     <Button
         android:layout_width="match_parent"
@@ -33,5 +35,6 @@
         android:id="@+id/listView"
         android:layout_below="@+id/txtTitle"
         android:layout_above="@+id/button"
-        android:layout_margin="20dp" />
+        android:layout_margin="20dp"
+        android:background="#c8ffffff" />
 </RelativeLayout>
