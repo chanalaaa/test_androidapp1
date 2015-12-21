@@ -7,6 +7,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
     } //main method
 
     public void clickAboutMe(View view) {
+        Log.d("stage:","click aboteme");
         Intent objIntent = new Intent(Intent.ACTION_VIEW);
         objIntent.setData(Uri.parse("http://www.google.com"));
         startActivity(objIntent);
