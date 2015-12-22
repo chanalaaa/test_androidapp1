@@ -43,7 +43,7 @@ public class MyAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(int i, View view, ViewGroup viewGroup) {
         //Open Service
         LayoutInflater objLayoutInflater = (LayoutInflater) objContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View view1 = objLayoutInflater.inflate(R.layout.my_listview, viewGroup, false);
