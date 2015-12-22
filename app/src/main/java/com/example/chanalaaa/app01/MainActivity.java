@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,6 +34,17 @@ public class MainActivity extends AppCompatActivity {
         */
 
     } //main method
+
+    private void createListView(){
+
+        MyData objMyData = new MyData();
+        int[] intIcon = objMyData.icon();
+        String[] strTitle = objMyData.title();
+
+        MyAdapter objMyAdapter = new MyAdapter(MainActivity.this, intIcon,strTitle);
+        ListView myListView = (ListView) findViewById(R.id.listView);
+        myListView.setAdapter(objMyAdapter);
+    }//createListView
 
     public void clickAboutMe(View view) {
         Log.d("stage:","click aboteme");
