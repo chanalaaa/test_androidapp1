@@ -7,4 +7,5 @@
     <dimen name="h2">20sp</dimen>
     <dimen name="my_margin">15dp</dimen>
     <dimen name="icon">120dp</dimen>
+    <dimen name="image">250dp</dimen>
 </resources>
