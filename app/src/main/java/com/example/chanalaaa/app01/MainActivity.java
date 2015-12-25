@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
     public void myIntentToDetail(int intClick){
 
         Intent objIntent = new Intent(MainActivity.this, ShowDetailActivity.class);
-        objIntent.putExtra("click",int intclick);
+        objIntent.putExtra("click",intClick);
         startActivity(objIntent);
 
         }
