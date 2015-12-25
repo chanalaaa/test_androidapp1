@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
@@ -46,7 +47,24 @@ public class MainActivity extends AppCompatActivity {
         MyAdapter objMyAdapter = new MyAdapter(MainActivity.this, intIcon,strTitle);
         ListView myListView = (ListView) findViewById(R.id.listView);
         myListView.setAdapter(objMyAdapter);
+
+        myListView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view,int i, long l){
+                myIntentToDetail(i);
+            }
+        });
+
     }//createListView
+
+    public void myIntentToDetail(int intClick){
+
+        Intent objIntent = new Intent(MainActivity.this, ShowDetailActivity.class);
+        objIntent.putExtra("click",int intclick);
+        startActivity(objIntent);
+
+        }
 
     public void clickAboutMe(View view) {
         Log.d("stage:","click aboteme");
