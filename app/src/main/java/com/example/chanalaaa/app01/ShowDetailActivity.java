@@ -58,6 +58,10 @@ public class ShowDetailActivity extends AppCompatActivity {
         int[] intDrawable = objMyData.icon();
         showTrafficImageView.setImageResource(intDrawable[intClick]);
 
+        //Show Detail
+        String[] strDetail = getResources().getStringArray(R.array.traffic_detail);
+        showDetailTextView.setText(strDetail[intClick]);
+
     } //Show Widget
 }
 
